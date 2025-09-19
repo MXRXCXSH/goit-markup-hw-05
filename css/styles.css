@@ -560,6 +560,7 @@ address {
 
 .footer-subscribe-form {
   display: flex;
+  gap: 24px;
 }
 
 .footer-subscribe-input {
@@ -570,8 +571,11 @@ address {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
   outline: transparent;
-  padding: 0 16px;
-  margin-right: 24px;
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
 }
 
 .footer-subscribe-input::placeholder {
@@ -596,13 +600,13 @@ address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  gap: 16px;
 }
 
 .footer-subscribe-button-icon {
   width: 24px;
   height: 20px;
   fill: #fff;
+  margin-left: 16px;
 }
 /* ---------MODAL--------- */
 
