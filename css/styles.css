@@ -616,11 +616,13 @@ address {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(46, 47, 66, 0.7);
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 10;
-  opacity: 0;
+  /* opacity: 0;
   visibility: hidden;
-  pointer-events: 0;
+  pointer-events: 0; */
 }
 
 .is-open {
@@ -645,11 +647,12 @@ address {
   padding-top: 72px;
   padding-bottom: 24px;
   background-color: #fcfcfc;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button {
   position: absolute;
-  border-radius: 100%;
+  border-radius: 50%;
   width: 24px;
   height: 24px;
   top: 24px;
@@ -661,14 +664,18 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-button:hover {
+.modal-close-button:hover,
+.modal-close-button:focus {
   background-color: #404bbf;
+  border: none;
 }
 
-.modal-close-button:hover .modal-close-button-icon {
+.modal-close-button:hover .modal-close-button-icon,
+.modal-close-button:focus .modal-close-button-icon {
   fill: #ffffff;
 }
 
@@ -698,6 +705,7 @@ address {
 
 .modal-field {
   width: 100%;
+  margin-bottom: 8px;
 }
 
 .input-container {
@@ -710,14 +718,14 @@ address {
   width: 100%;
   height: 40px;
   background-color: transparent;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-left: 36px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 38px;
   padding-right: 16px;
   outline: transparent;
 }
 
 .modal-input:focus {
-  border: 1px solid #4d5ae5;
+  border-color: 1px solid #4d5ae5;
 }
 
 .modal-input:focus + .input-icon {
@@ -725,9 +733,9 @@ address {
 }
 
 .modal-input-label {
-  display: inline-block;
+  display: block;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
@@ -744,7 +752,7 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-icon::after {
+/* .input-icon::after {
   position: absolute;
   content: "";
   top: 0px;
@@ -753,7 +761,7 @@ address {
   height: 100%;
   background-color: #2e2f42;
   pointer-events: none;
-}
+} */
 
 .modal-submit-button {
   display: block;
@@ -777,16 +785,20 @@ address {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 100%;
-  min-height: 138px;
+  min-height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 16px 8px;
   outline: transparent;
   resize: none;
 }
 
 .modal-comment:focus {
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5;
 }
 
 .modal-comment::placeholder {
@@ -797,12 +809,16 @@ address {
   opacity: 40%;
 }
 
+.modal-check-field {
+  margin-bottom: 24px;
+}
+
 .modal-check-label {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   a {
