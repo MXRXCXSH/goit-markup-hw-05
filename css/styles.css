@@ -543,7 +543,7 @@ address {
   fill: #f4f4fd;
 }
 
-.footer-subscribe-form {
+.footer-subscribe-container {
   display: block;
   margin-bottom: 32px;
 }
@@ -558,7 +558,7 @@ address {
   margin-bottom: 16px;
 }
 
-.footer-subscribe-container {
+.footer-subscribe-form {
   display: flex;
 }
 
