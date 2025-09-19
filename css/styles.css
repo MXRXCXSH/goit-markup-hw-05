@@ -109,6 +109,11 @@ address {
   color: #404bbf;
   text-decoration: none;
 }
+
+/* .navigation:active {
+  color: #404bbf;
+  transform: translateY(0%);
+} */
 .menu-link1 {
   color: #404bbf;
 }
