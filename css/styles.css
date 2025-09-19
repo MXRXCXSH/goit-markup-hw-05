@@ -114,13 +114,6 @@ address {
   color: #404bbf;
   transform: translateY(0%);
 } */
-.menu-link1 {
-  color: #404bbf;
-}
-
-.menu-link1::after {
-  transform: translateY(0%);
-}
 
 /* .navigation:hover::after,
 .navigation:focus::after {
